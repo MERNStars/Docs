@@ -54,7 +54,7 @@ Admin dashboard
 The target audience for the weExplore website is the wider community of Clayton, Victoria who are seeking health advice, education and a group that has similar interests in health and wellbeing. 
 
 #### The current members’ metrics are: 
-Roughly the age range is between mid 20’s all the way through to mid 40’s. Consisting of a variety of demographics and socioeconomic status, however, predominantly the members are of middle socioeconomic status. The members consist of students from surrounding universities particularly from Monash university, young professionals and young families. 
+Roughly the age range is between mid 20’s all the way through to mid 40’s. Consisting of a variety of demographics and socioeconomic status, however, predominantly the members are of middle socioeconomic status. The members consist of students from surrounding universities particularly from Monash university, young professionals and young families. Many have low computer literacy.  
 The target audience will initially consist of the current member base that is part of the MeetUp group. However, the aim is to expand the reach to more members of the community who are seeking and in need of support with their health and overall wellbeing. 
 
 ### Tech Stack
@@ -116,14 +116,31 @@ In kanban style, these user stories will populate our backlog and become one uni
 #### User story #1
 **As the director of weExplore I want the ability to create and promote our events in one place so that our community knows where to find out information and to reduce work time for me.**  
 Technical Features/ Definition of done:  
+- Custom create event form using React and Redux forms
+- This form will be available from the admin dashboard page
+- Event API endpoints Create/Get/Edit/Delete  
+- Fields required: Title, Description, Date + Time, Category, Kid-friendly, Presenter(s) information ( name, avatar, qualifications, short bio), recurrence/ frequency, maximum number of attendees and Image related to event.  
+- On submit the information is retrieved by the server and sent and stored in the database. 
+- This event information is then retrieved by the server and rendered on the "all events" page in React to display to the users instantly.
+- If possible this information is automatically linked to MeetUp.com and the weExplore socials. I.e. an automatically generated FaceBook post using the image, title and description of the event.      
 
 #### User story #2
 **As the director of weExplore I want to have access to our master database so that I understand the needs and wants of our members and can cater to these findings.**  
 Technical Features/ Definition of done:  
+- Have an administration dashboard that once the admin log ins automatically gets redirected to.
+- The admin dashboard displays: Events created, "create event" button and list of users.  
+- Admin can click on a singular event created and be redirected to a component that displays: Event details, edit or delete buttons and information regarding users attending those events.  
+- The list of users is interactive and the administration can click on an individual user and see what events they have previously attended. 
+- Users need to have a field (array) that stores the ID of events they have attended.   
 
 #### User story #3
 **As the director of weExplore I want an admin only login so that I can access the database and create events with the assurance of security and proper authentication.**  
-Technical Features/ Definition of done: 
+Technical Features/ Definition of done:  
+- Credentials for administration that generates an admin only token using jwt.
+- Boolean field in the user sign up that is "true" for admin.
+- Middleware in the server that checks the administration token. 
+- Password is hashed and salted.
+- This token provides the authorisation to create/edit/delete events and have access to the master database.
 
 ### User Persona's
 #### User Persona #1 
@@ -159,7 +176,7 @@ Technical Features/ Definition of done:
 - At the bottom of the page, there will be a bar with a button ‘attend’. For user to attend the event, they would need to press this button. The button will store the user’s ID and send a post request to the server where the user’s ID is stored inside an array for the event.   
 
 #### User story #3
-**As a member I want to be able to search for events by category or date so that I can find the events suited for my needs and not have to scroll through all the events.**  
+**As a member I want to be able to search for events by category, date or kid-friendly so that I can find the events suited for my needs and not have to scroll through all the events.**  
 Technical Features/ Definition of done:  
 - All the events are mounted on load through calling to the server which calls to the MONGODB database
 - events have a property "category"
@@ -170,9 +187,11 @@ Technical Features/ Definition of done:
 - Drop down button to organise by date (most recent to least recent)
 - Events will have a date/time field 
 - If the order has been changed a function in the events component that reorganises the order of the events array is called.
-- Events are rendered on the page in new order.  
+- Events are rendered on the page in new order.
+- Button to filter by kid-friendly which triggers a function that itterates through the array of events and only renders ones that have been labelled as kid-friendly
+- The events have a field (boolean) to set if the event is kid-friendly.   
 
-#### User story #3
+#### User story #4
 **As a busy user I want to be able to change my attendance status online to an event so that I can let weExplore know I will no longer be attending and won’t feel bad.**   
 Technical Features/ Definition of done:  
 - User will need the ability to login to their account for the server to retrieve their user ID and store this in the component state. 
@@ -189,14 +208,31 @@ Technical Features/ Definition of done:
 
 **Pain-points:** Struggling to find information about what weExplore does. Wants to reach out but only finding a meetup.com website, is seeking something of a more professional standard or has their own website. Wants to know what services and events weExplore host.  
 
-#### User story #4
+#### User story #5
+**As a not yet user of weExplore I want to be able to scroll through and see all the events on offer without having to sign up so that I don't have to hand out my details when I am not ready**  
+Technical Features/ Definition of done:  
+- Upcoming events on the homepage that is viewable by all users. 
+- Events are displayed in cards with images and visuals being the priority
+- Event details to be displayed in the cards: Image, icon to represent category, date of event, title of event, presenter name and icon. 
+- Ability to click on the entire card that will send them to the singular event page for more information. 
+- A fixed bar at the bottom with button "attend" to emphasise the priority of attending the event will be rendered. 
+- A singular event page will contain: Title, image, description, kid-friendly or not, dates, past testimonials (if this event has been held before).
+- Once the user clicks "attend" if they are not a member they will be redirected to the sign up page.  
+
+
+#### User story #6
 **As a not yet user of weExplore I want to be able to know more about weExplore so that I can make an informed decision on whether I want to user their services or not.**  
 Technical Features/ Definition of done:  
+- Static about page that is available to all users.
+- About link on the main navigational bar 
+- About link on the home page    
 
-#### User story #5
+#### User story #7
 **As a user I want to read reviews or testimonials on past events at weExplore so that I can assess whether the events are worth going to and of good value.**  
 Technical Features/Definition of done:  
-
+- Testimonials are rendered on the about page as this apge is accessible by all users.  
+- Testimonials/reviews attached to events about similiar past events.  
+- The ability for users to review an event they attended either through an email service or logging in clicking on event attended and a star system and comment box available for the user to make these testimonials/ reviews.     
 
 #### User Persona #3  
 **Role:** Has attended one event at weExplore with a friend. Really enjoyed the Pilates class.  
@@ -205,13 +241,25 @@ Technical Features/Definition of done:
 
 **Pain-point:** Wants to go to more events at weExplore as really likes the Pilates class but unsure of what other events weExplore has to offer. Would like regular updates on what is going on at the centre and of any changes. Would like a link or website to forward to family and friends who would benefit from weExplore.  
 
-#### User story #6
+#### User story #8
 **As a new user of weExplore I want to be able to contact them so that I can learn more information that is specific to me.**  
-Technical Features/ Definition of done:  
+Technical Features/ Definition of done:
+- Static contact page with all the details on how weExplore is contactable.
+- Contact link on main navigational bar
+- Contact link on the about page.   
+- On the contact page provide links to weExplore's various social media outlets like FaceBook and Instagram and as that is a point of call for many of their users. 
+- Using a service like mailgun, create a contact form that can generate an email service for users to email the weExplore administration.  
 
-#### User story #7
+
+#### User story #9
 **As an attendee of an event to weExplore I want to know who is going to be presenting and their qualifications so that I know the event I am attending is worthwhile and legitimate.**  
-Technical Features/ Definition of done:     
+Technical Features/ Definition of done:  
+- Presenter field on the event form
+- Presenter is its own collection with the following properities: Name, Qualifications, Avatar, Description, Contact details (i.e. social media or website links).
+- Administration inputs this information into create event form. (React-redux form). 
+- The server grabs this information (through POST request) and saves and stores it in the database. 
+- Ability of the admin to auto populate the presenter fields if presenter has spoken before.
+- The Presenter information is rendered on the event page that a user can click on and have access to.          
 
 
 
