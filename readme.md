@@ -94,6 +94,22 @@ Below are diagrams of level 0 and level 1 of the dataflow for the *we Explore* w
 
 The application’s architecture is using MERN stack. The diagram demonstrates the interaction between the services, frameworks and applications. The high level overview is further discussed below. 
 
+Front-End Development
+- The User Interface (UI) is developed using a combination of HTML, CSS and JavaScript.
+- React JS, a JavaScript library is used to build the UI portion of the website. This includes the implementation of the UI and the interactive components of the application. React also contains the logic for the interaction with back-end (Express web server). That is the  operations for sending or modifying members and events data in the database.
+- The application will be hosted on Netlify, a website hosting service. 
+
+Back-End Development
+- Express JS is used to build the Web server framework. It contains the logic for the interaction between the application and the Database. Specifically, it contains the logic to the querying, reading, modifying and deleting of members and events data.
+- Mongoose is an Object Data Modeling (ODM) library for Express, that contains the logic, modeling environment and connection to MongoDB.  The mongoose model provides the interface for the CRUD operations. Mongoose also allows the creation of Schema, which dictates how the database is constructed.
+- The backend is built on Node JS. Node allows us to execute JavaScript code outside of the browser.
+- The back-end will be hosted on heroku, a web server hosting service. 
+
+Databases
+- Data will be hosted using MongoDB, which is a non-relational database. The database is hosted on MongoDB Atlas. All the data about members and event/program details are included inside the MongoDB. 
+- AWS S3 is used to store images relating to the events. The image URL is used and stored inside the MongoDB. It’s then able to be retrieved by the application by querying the specific data from the database.  
+
+
 ![Application ArchitectureDiagram](./assets/App-Architecture-Diagram.jpg)
 
 ## User Stories
