@@ -96,7 +96,7 @@ The application’s architecture is using MERN stack. The diagram demonstrates t
 ![Application ArchitectureDiagram](./assets/App-Architecture-Diagram.jpg)
 
 ## User Stories
-The user stories were generated using the agile user story methodology. User stories were created using the
+The user stories were generated using the agile user story methodology. User stories were created using the following structure
 
 *As an [user] I want to [desired function] so that [desired outcome].* 
 
@@ -144,30 +144,43 @@ Technical Features/ Definition of done:
 - When signup is completed, they are either redirected back to the home page or back to the event page they were looking at depending on the situation.   
 - Authorisation token is generated in the back-end and sent to the header to allow user to interact with events. 
 - Sign-up form fields are run through validations to ensure correct formating and presence. 
-- Passwords are hashed and salted for security  
+- Passwords are hashed and salted for security 
+- Additionally, this user would require updates on upcoming or future events, and they would opt-in for newsletters and emails. They achieve this by clicking a tick box in the form, which stores a ‘true’ value in the database. This allows admin to generate a list of users who wish to receive newsletters and emails and complete an email blast when necessary.  
 
 #### User story #2
 **As a member of weExplore I want to be able to sign up for an event and get a reminder on the web application so that weExplore are aware of my attendance and I can be organised**  
 Technical Features/ Definition of done:
 - Users can browse and explore all events without signing in 
-- To attend an even a user must log in or sign up
+- To attend an event a user must log in or sign up
 - Users browse through all events on the event page where an API endpoint is created to get all events  
 - Events are presented in the form of cards where the user can click on the card and routes to the single event page where an API endpoint is created to get a single event based on an ID
 - Once they click attend on an event, it prompts the application to send their user’s ID to an array stored inside the event’s database and sends the user a calendar invite through Google Calendar using its API.    
 - where they browse the events page for upcoming events. Events are presented in the form of cards where the user can click on the card, which routes them to the event. On this event page, the information will come from database, which uses a get request and the event ID to populate that data into the react component. 
 - At the bottom of the page, there will be a bar with a button ‘attend’. For user to attend the event, they would need to press this button. The button will store the user’s ID and send a post request to the server where the user’s ID is stored inside an array for the event.   
 
-  
-
-
-#### User story #2
+#### User story #3
 **As a member I want to be able to search for events by category or date so that I can find the events suited for my needs and not have to scroll through all the events.**  
-Technical Features/ Definition of done:
+Technical Features/ Definition of done:  
+- All the events are mounted on load through calling to the server which calls to the MONGODB database
+- events have a property "category"
+- Drop down button to search by category
+- Drop down options include all the categories available, where the user clicks on the category they want to see events related to.  
+- Function required in the events component in React that maps through the array of events and filters in the ones that match the category selection. 
+- The selected events are rendered to the page for the user to interact with. 
+- Drop down button to organise by date (most recent to least recent)
+- Events will have a date/time field 
+- If the order has been changed a function in the events component that reorganises the order of the events array is called.
+- Events are rendered on the page in new order.  
 
 #### User story #3
 **As a busy user I want to be able to change my attendance status online to an event so that I can let weExplore know I will no longer be attending and won’t feel bad.**   
 Technical Features/ Definition of done:  
-
+- User will need the ability to login to their account for the server to retrieve their user ID and store this in the component state. 
+- The status on the event page for this particular user is "attending"
+- A button based off the state of the user in the store of the component needs to be available with the label/value of "unattending"  
+- Once this button has been clicked the state changes which sends a patch request to the server to remove the user's ID from the array of attendees in the event where the server makes these changes to the database.  
+- Notification is sent to the user informing them of these changes made. 
+- The button "unattend" toggles to "attend" due to the state change in the store.    
 
 #### User Persona #2
 **Role:** New member of the community and has driven past weExplore, yet to attend any of the events but is seeking support for their mental health.  
