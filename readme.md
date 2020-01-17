@@ -9,9 +9,9 @@ weExplore is a not for profit organisation based in Clayton, Victoria, providing
 
 The purpose of the website is to provide the ability for weExplore to create events and post them to the site there webpage where their members can sign up to attend the events and receive information about upcoming events.
 
-Finally, it allows the administration of weExplore to have access to a master database of their members. This lets the administration have a greater understanding of their member’s metrics and needs to be able to cater specifically to events of their liking. 
+Finally, it allows the administration of weExplore to have access to a master database of their members. This lets the administration have a greater understanding of their member’s metrics and their needs to be able to cater specifically to events of their liking. 
 
-Currently weExplore use MeetUp and word of mouth to promote their events to the community. Through the build of a custom website, weExplore will have further reach and a consistent event management system. 
+Currently weExplore use MeetUp and word of mouth to promote their events. Through the build of a custom website, weExplore will have further reach to a wider audience and a consistent event management system. 
 
 ### Functionality
 
@@ -21,7 +21,7 @@ It will contain a feed with upcoming events that are available for members to at
 
 Furthermore, the website will allow the administrators of weExplore to have access to a database of their users and the events the users are attending. This will allow them to gain a comprehensive understanding of their user’s wants, needs, and interests concerning their health. 
 
-Finally, the weExplore website will be the primary point of information for the members to find out more about the company, services offered and contact information. This will be accessible through different pages of the website. 
+Finally, the weExplore website will be the primary source for the members to find out more about the company, services offered and contact information. This will be accessible through different pages of the website. 
 
 The site will have a main navigation bar to allow ease of accessibility for all pages. It will contain the main events component with a singular event component and the ability to “click” attending events. 
 
@@ -54,8 +54,8 @@ Admin dashboard
 The target audience for the weExplore website is the wider community of Clayton, Victoria who are seeking health advice, education and a group that has similar interests in health and wellbeing. 
 
 #### The current members’ metrics are: 
-Roughly the age range is between mid 20’s all the way through to mid 40’s. Consisting of a variety of demographics and socioeconomic status, however, predominantly the members are of middle socioeconomic status. The members consist of students from surrounding universities particularly from Monash university, young professionals and young families. 
-The target audience will initially consist of the current member base that is part of the MeetUp group. However, the aim is to expand the reach to more members of the community who are seeking and in need of support with their health and overall wellbeing. 
+The age range is roughly between mid 20’s all the way through to mid 40’s, consisting of a variety of demographics and socioeconomic status. However, predominantly the members are of middle socioeconomic status. The types of members consist of students from surrounding universities (particularly from Monash university), young professionals and young families. 
+The target audience will initially be current members who are part of the WeExplore MeetUp group. The aim is to expand the reach to more members of the community who are seeking and in need of support with their health and overall wellbeing. 
 
 ### Tech Stack
 
@@ -96,22 +96,24 @@ The application’s architecture is using MERN stack. The diagram demonstrates t
 ![Application ArchitectureDiagram](./assets/App-Architecture-Diagram.jpg)
 
 ## User Stories
-The user stories were generated using the agile user story methodology. User stories were created using the following structure
+The user stories were generated using the agile user story methodology. User stories were created using the following structure:
 
 *As an [user] I want to [desired function] so that [desired outcome].* 
 
-User stories are essential to agile projects as they allow for the ability of the team to put people (end users) first. To build functionality and components that satisfy the user’s needs and wants. The creation of the user stories allowed our team to understand what we were building and why we were building these components. User stories ensure that our design and development are human-centered.  
+User stories are essential to agile projects as they allow the team to put people (end users) first, and therefore build functionality and components that satisfy the user’s needs and wants. The creation of the user stories allowed our team to understand what we were building and why we were building these components. User stories ensure that our design and development are human-centered.  
 
-Our process below follows the structure of generating user personas. Then creating non-technical user stories for these personas.   
+Our process below follows the structure of generating user personas. Then creating non-technical user stories for these personas.
+
 Below each user story, we have generated technical functions, features, and components that are required to meet the definition of done for each user story.   
+
 In kanban style, these user stories will populate our backlog and become one unit of work for a member of the team to complete during the build phase.  
 
 ### Administration User Persona
-**Role:** Administration, Manager of weExplore  
+**Role:** Administration, Manager of weExplore
 
 **Motivation:** To help members of the community achieve good health and overall wellbeing, provide access to the community to health services and health education. Create a successful and impactful not for profit. To better understand their members and their health needs and/or wants.  
 
-**Pain-points:** Do not have a central point of call where they can promote their services, events and contact details. Do not have access to a master database of their members, so they do not understand their clientele or have definitive data on what members are going to what events.  
+**Pain-points:** Do not have a central point of call where they can promote their services, events and contact details. Do not have access to a master database of their members, so they do not understand their clientele or have definitive data on what members are going to what events.
 
 #### User story #1
 **As the director of weExplore I want the ability to create and promote our events in one place so that our community knows where to find out information and to reduce work time for me.**  
@@ -123,7 +125,7 @@ Technical Features/ Definition of done:
 
 #### User story #3
 **As the director of weExplore I want an admin only login so that I can access the database and create events with the assurance of security and proper authentication.**  
-Technical Features/ Definition of done: 
+Technical Features/ Definition of done:
 
 ### User Persona's
 #### User Persona #1 
@@ -138,7 +140,7 @@ Technical Features/ Definition of done:
 Technical Features/ Definition of done:
 - Users will sign up on the signup page.  
 - API end point for user sign-up/login   
-- Signup page contains a React/Redux form component. The initial state of the inputs is null until the user enters their details and hits submit. The component stores the user’s inputs into an object that is sent via a post request to the back-end server.  
+- Signup page contains a React/Redux form component. The initial state of the inputs is null until the user enters their details and hits submit. The component stores the user’s inputs into an object that is sent via a post request to the back-end server.
 - Express will take the information provided by the Front-end and send that data into the Mongo database to be stored.  
 - After the user has completed their registration, they will remain logged in.  
 - When signup is completed, they are either redirected back to the home page or back to the event page they were looking at depending on the situation.   
