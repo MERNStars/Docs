@@ -275,6 +275,7 @@ Technical Features/ Definition of done:
 ![user-sign-up](./assets/wireframe/user-sign-up.png)
 ![about-page](./assets/wireframe/about-page.png)
 ![contact-page](./assets/wireframe/contact-page.png)
+![admin-dashboard](./assets/wireframe/admin-dashboard.png)
 ![create-event-page](./assets/wireframe/create-event-page.png)
 
 ## Project Management
