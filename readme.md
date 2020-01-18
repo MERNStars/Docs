@@ -264,6 +264,15 @@ Technical Features/ Definition of done:
 - Ability of the admin to auto populate the presenter fields if presenter has spoken before.
 - The Presenter information is rendered on the event page that a user can click on and have access to.          
 
+## Wireframes
+### Desktop Views
+![homepage](./assets/wireframe/homepage.png)
+![all-events](./assets/wireframe/all-events.png)
+![single-event](./assets/wireframe/single-event-page.png)
+![login-page](./assets/wireframe/login-page.png)
+![user-sign-up](./assets/wireframe/user-sign-up.png)
+![about-page](./assets/wireframe/about-page.png)
+![contact-page](./assets/wireframe/contact-page.png)
 
 
 
