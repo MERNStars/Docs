@@ -107,7 +107,9 @@ Our process below follows the structure of generating user personas. Then creati
 
 Below each user story, we have generated technical functions, features, and components that are required to meet the definition of done for each user story.   
 
-In kanban style, these user stories will populate our backlog and become one unit of work for a member of the team to complete during the build phase.  
+In kanban style, these user stories will populate our backlog and become one unit of work for a member of the team to complete during the build phase.
+
+The user stories were developed through a series of questions and surveys sent to our client, the director of weExplore. 
 
 ### Administration User Persona
 **Role:** Administration, Manager of weExplore
@@ -273,9 +275,15 @@ Technical Features/ Definition of done:
 ![user-sign-up](./assets/wireframe/user-sign-up.png)
 ![about-page](./assets/wireframe/about-page.png)
 ![contact-page](./assets/wireframe/contact-page.png)
+![create-event-page](./assets/wireframe/create-event-page.png)
 
-
-
+## Project Management
+Our team to follow agile methodology used Kanban, a style of agile.  
+Kanban uses the style of creating a backlog and then each unit of work in a backlog is a cycle of work that is worked on and then "deployed" to allow for the method of continuous development. Units of work or tickets were assigned to a team member and a dead line was set to achieve the cycle of work. 
+Once the task was undertaken it was moved from the "To do" backlog to the "Doing". On completion by the team member it was moved into the "done" section for it do be reviewed by the other team members before being moved into the "Done Done" section.  
+Below are screenshots of how we used a Trello board to follow the Kanban style and manage our project for Part A.      
+![Trello board](./assets/trello-capture-1.JPG)
+![Trello card](./assets/trello-card-1.JPG)
 
 
 
