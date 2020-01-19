@@ -297,6 +297,10 @@ Technical Features/ Definition of done:
 ![admin-dashboard](./assets/wireframe/admin-dashboard.png)
 ![create-event-page](./assets/wireframe/create-event-page.png)
 
+### Mobile Views
+![mobile-view-one](./assets/wireframe/mobile-view-1.png)
+![mobile-view-two](./assets/wireframe/mobile-view-2.png)
+
 ## Project Management
 Our team to follow agile methodology used Kanban, a style of agile.  
 Kanban uses the style of creating a backlog and then each unit of work in a backlog is a cycle of work that is worked on and then "deployed" to allow for the method of continuous development. Units of work or tickets were assigned to a team member and a dead line was set to achieve the cycle of work. 
