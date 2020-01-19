@@ -9,7 +9,7 @@ weExplore is a not for profit organisation based in Clayton, Victoria, providing
 
 The purpose of the website is to provide the ability for weExplore to create events and post them to the site there webpage where their members can sign up to attend the events and receive information about upcoming events.
 
-Finally, it allows the administration of weExplore to have access to a master database of their members. This lets the administration have a greater understanding of their member’s metrics and their needs to be able to cater specifically to events of their liking. 
+Finally, it allows the weExplore administration to have access to a master database of their members. This lets the administration have a greater understanding of their member’s metrics and their needs to be able to cater specifically to events of their liking. 
 
 Currently weExplore use MeetUp and word of mouth to promote their events. Through the build of a custom website, weExplore will have further reach to a wider audience and a consistent event management system. 
 
@@ -54,7 +54,8 @@ Admin dashboard
 The target audience for the weExplore website is the wider community of Clayton, Victoria who are seeking health advice, education and a group that has similar interests in health and wellbeing. 
 
 #### The current members’ metrics are: 
-Roughly the age range is between mid 20’s all the way through to mid 40’s. Consisting of a variety of demographics and socioeconomic status, however, predominantly the members are of middle socioeconomic status. The members consist of students from surrounding universities particularly from Monash university, young professionals and young families. Many have low computer literacy.  
+Roughly the age range is between mid 20’s all the way through to mid 40’s. Consisting of a variety of demographics and socioeconomic status, predominantly the members are of middle socioeconomic status. The members consist of students from surrounding universities particularly from Monash university, young professionals and young families. Many have low computer literacy.  
+
 The target audience will initially consist of the current member base that is part of the MeetUp group. However, the aim is to expand the reach to more members of the community who are seeking and in need of support with their health and overall wellbeing. 
 
 
@@ -73,7 +74,7 @@ Application:
 - Html & CSS/SASS
 - Jest
 
-DevOps:
+Source control:
 - Github
 
 Deployment:
@@ -97,7 +98,7 @@ The application’s architecture is using MERN stack. The diagram demonstrates t
 Front-End Development
 - The User Interface (UI) is developed using a combination of HTML, CSS and JavaScript.
 - React JS, a JavaScript library is used to build the UI portion of the website. This includes the implementation of the UI and the interactive components of the application. React also contains the logic for the interaction with back-end (Express web server). That is the  operations for sending or modifying members and events data in the database.
-- The application will be hosted on Netlify, a website hosting service. 
+- The front-end of the application will be hosted on Netlify, a website hosting service. 
 
 Back-End Development
 - Express JS is used to build the Web server framework. It contains the logic for the interaction between the application and the Database. Specifically, it contains the logic to the querying, reading, modifying and deleting of members and events data.
@@ -106,7 +107,7 @@ Back-End Development
 - The back-end will be hosted on heroku, a web server hosting service. 
 
 Databases
-- Data will be hosted using MongoDB, which is a non-relational database. The database is hosted on MongoDB Atlas. All the data about members and event/program details are included inside the MongoDB. 
+- Data will be hosted using MongoDB, a non-relational database. The database is hosted on MongoDB Atlas. All the data about members and event/program details are included inside the MongoDB. 
 - AWS S3 is used to store images relating to the events. The image URL is used and stored inside the MongoDB. It’s then able to be retrieved by the application by querying the specific data from the database.  
 
 
@@ -136,6 +137,7 @@ The user stories were developed through a series of questions and surveys sent t
 
 #### User story #1
 **As the director of weExplore I want the ability to create and promote our events in one place so that our community knows where to find out information and to reduce work time for me.**  
+
 Technical Features/ Definition of done:  
 - Custom create event form using React and Redux forms
 - This form will be available from the admin dashboard page
@@ -147,6 +149,7 @@ Technical Features/ Definition of done:
 
 #### User story #2
 **As the director of weExplore I want to have access to our master database so that I understand the needs and wants of our members and can cater to these findings.**  
+
 Technical Features/ Definition of done:  
 - Have an administration dashboard that once the admin log ins automatically gets redirected to.
 - The admin dashboard displays: Events created, "create event" button and list of users.  
