@@ -1,4 +1,7 @@
 # Assessment: Real-World Application - Part A
+*By Isabelle Peskett, Chris Tri and Jack Toke*  
+
+*Coder Academy Fast-Track Students 19/20 Melbourne*
 
 ## Description of Website
 
@@ -88,8 +91,8 @@ Project Management/Misc:
 
 ## Dataflow Diagram  
 Below are diagrams of level 0 and level 1 of the dataflow for the *we Explore* web application  
- ![DFD level 0](./assets/DFD-level0.jpg)  
- ![DFD level 1](./assets/DFD-level1.jpg)  
+ ![DFD level 0](./docs/DFD-level0.jpg)  
+ ![DFD level 1](./docs/DFD-level1.jpg)  
 
 ## Application Architecture Diagram
 
@@ -111,7 +114,7 @@ Databases
 - AWS S3 is used to store images relating to the events. The image URL is used and stored inside the MongoDB. It’s then able to be retrieved by the application by querying the specific data from the database.  
 
 
-![Application ArchitectureDiagram](./assets/App-Architecture-Diagram.jpg)
+![Application ArchitectureDiagram](./docs/App-Architecture-Diagram.jpg)
 
 ## User Stories
 The user stories were generated using the agile user story methodology. User stories were created using the following structure:
@@ -287,27 +290,27 @@ Technical Features/ Definition of done:
 
 ## Wireframes
 ### Desktop Views
-![homepage](./assets/wireframe/homepage.png)
-![all-events](./assets/wireframe/all-events.png)
-![single-event](./assets/wireframe/single-event-page.png)
-![login-page](./assets/wireframe/login-page.png)
-![user-sign-up](./assets/wireframe/user-sign-up.png)
-![about-page](./assets/wireframe/about-page.png)
-![contact-page](./assets/wireframe/contact-page.png)
-![admin-dashboard](./assets/wireframe/admin-dashboard.png)
-![create-event-page](./assets/wireframe/create-event-page.png)
+![homepage](./docs/wireframe/homepage.png)
+![all-events](./docs/wireframe/all-events.png)
+![single-event](./docs/wireframe/single-event-page.png)
+![login-page](./docs/wireframe/login-page.png)
+![user-sign-up](./docs/wireframe/user-sign-up.png)
+![about-page](./docs/wireframe/about-page.png)
+![contact-page](./docs/wireframe/contact-page.png)
+![admin-dashboard](./docs/wireframe/admin-dashboard.png)
+![create-event-page](./docs/wireframe/create-event-page.png)
 
 ### Mobile Views
-![mobile-view-one](./assets/wireframe/mobile-view-1.png)
-![mobile-view-two](./assets/wireframe/mobile-view-2.png)
+![mobile-view-one](./docs/wireframe/mobile-view-1.png)
+![mobile-view-two](./docs/wireframe/mobile-view-2.png)
 
 ## Project Management
 Our team to follow agile methodology used Kanban, a style of agile.  
 Kanban uses the style of creating a backlog and then each unit of work in a backlog is a cycle of work that is worked on and then "deployed" to allow for the method of continuous development. Units of work or tickets were assigned to a team member and a dead line was set to achieve the cycle of work. 
 Once the task was undertaken it was moved from the "To do" backlog to the "Doing". On completion by the team member it was moved into the "done" section for it do be reviewed by the other team members before being moved into the "Done Done" section.  
 Below are screenshots of how we used a Trello board to follow the Kanban style and manage our project for Part A.      
-![Trello board](./assets/trello-capture-1.JPG)
-![Trello card](./assets/trello-card-1.JPG)
+![Trello board](./docs/trello-capture-1.JPG)
+![Trello card](./docs/trello-card-1.JPG)
 
 
 
